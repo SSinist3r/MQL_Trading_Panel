@@ -473,7 +473,7 @@ void TradingPanel::Click_OrderCross(void){
       mLots = NormalizeDouble(mLots/mAmount/2, 2);
    for(uint i=0; i<mAmount; i++)
       mTA.OrderCross(mLots,3,(mEnable_SL)?mSL*10:0,(mEnable_TP)?mTP*10:0,
-                             (mEnable_SL)?mTP*10:0,(mEnable_TP)?mTP*10:0);
+                             (mEnable_SL)?mSL*10:0,(mEnable_TP)?mTP*10:0);
    ChartRedraw();
 }
 
